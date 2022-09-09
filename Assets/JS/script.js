@@ -3,21 +3,35 @@ var timerEl = document.getElementById("time")
 //all functions need to be on click?????????
 
 //questions and answers, will be in OL
-var questionSet = []
 
-var questions=[
-    ["What global phenom K-pop group do these members belong to?","BTS", "Big Bang", "Stray Kids", "Seventeen"], 
-    ["What is the popular alcoholic drink that combines soju and beer?","Mul", "Somaek", "Maekju", "A Good Time"], 
-    ["How many out of the 9 members of the k-pop girl-group TWICE are Korean?","1" , "3", "4", "6"], 
-    ["What is the most famous Korean vacation-island?","Oedo", "Hongdo", "Ulleungdo", "Jeju"], 
-    ["What famous K-drama are these two (now married) actors from?","Vagabond", "Crash Landing on You", "Attorney Woo", "Prison Playbook"]
+
+var questionSet = [
+    {
+        question: "What global phenom K-pop group do these members belong to?",
+        answers: ["BTS", "Big Bang", "Stray Kids", "Seventeen"]
+    correct: 0
+    },
+    {
+        question: "What is the popular alcoholic drink that combines soju and beer?"
+    answers: ["Mul", "Somaek", "Maekju", "A Good Time"]
+    },
+    {
+        question: "How many out of the 9 members of the k-pop girl-group TWICE are not Korean?",
+        answers: ["1", "3", "4", "6"],
+        answer: 2
+    },
+    {
+        question: "What is the most famous Korean vacation-island?"
+        answers: ["Oedo", "Hongdo", "Ulleungdo", "Jeju"]
+        answer: 3
+    },
+    {
+        question: "What famous K-drama are these two (now married) actors from?",
+        answers: ["Vagabond", "Crash Landing on You", "Attorney Woo", "Prison Playbook"],
+        answer: 1,
+    }
+
 ];
-
-function showQuestion (){
-    document.getElementById("#questions").textContent = questionSet;
-    JSON.stringify(Q1)
-}
-showQuestion();
 
 // timer
 

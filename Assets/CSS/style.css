@@ -2,17 +2,21 @@
     font-size: 38px;
     font-family: serif;
 }
+
 body{
-    background-image: "C:\users\kjman\repo\Homework Challenges\Challenges\04 Quiz\Quiz_Challenge\Assets\images\seoul-wallpaper-10.jpg";
-}
-header{
-    text-align: center;
-  
+    background-image:url("Quiz_Challenge\Assets\images\seoul-wallpaper-10.jpg");
 }
 
-main{
+h1{
+    color: white;
+}
+
+body{
     display: flex;
     justify-content: center;
+    background-color: salmon;
+    text-align: center;
+    flex-direction: column;
 }
 
 a{
@@ -20,5 +24,18 @@ a{
     align-items: center;
     flex-direction: column;
     text-decoration: none;
+    
+}
+
+#start{
+    border-radius: 12px;
+}
+#start:hover{
+    opacity: 0;
+    
+}
+a:hover {
+    
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmnI3uhj5q73wY0cEoQpRB92PeF_hB9hwhgQ&usqp=CAU');
     
 }
