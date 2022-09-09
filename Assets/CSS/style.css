@@ -1,44 +1,24 @@
 *{
-    font-style: serif;
+    font-size: 38px;
+    font-family: serif;
 }
-header {
-    display: flex; 
-    justify-content: space-evenly;
-    flex-direction: row;
+body{
+    background-image: "C:\users\kjman\repo\Homework Challenges\Challenges\04 Quiz\Quiz_Challenge\Assets\images\seoul-wallpaper-10.jpg";
 }
-/* welcome banner */
-h1{
-    margin-top: 50px;
+header{
     text-align: center;
-    font-size: 36px; 
+  
+}
+
+main{
+    display: flex;
+    justify-content: center;
 }
 
 a{
     display: flex;
-    flex-direction: column;
     align-items: center;
-}
-/* timer in header */
-#timer{
-    border: solid blue;
-    display: inline;
-}
-
-#home{
-    height: 100px;
-    width: 100px;
+    flex-direction: column;
+    text-decoration: none;
     
-}
-
-
-/* questions.html */
-
-#questions{
-    border: solid blue;
-    background-color:gray
-}
-
-li{
-    border: solid green; 
-    background-color: green;
 }
