@@ -1,5 +1,5 @@
 # Quiz_Challenge
-# password-generator
+
 
 click link to visit page: [Quiz!](https://kjman26.github.io/password-generator-Chris-Kang/)
 
