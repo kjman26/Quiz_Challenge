@@ -93,3 +93,16 @@ function countdown() {
 };
 
 countdown();
+
+//scoreboard
+function scoreboard(){
+    var score = timeLeft;
+    
+    if(questionCount>4){
+        prompt('Input Initials!')
+    }
+    else{
+        prompt("no love")
+    }
+
+}
