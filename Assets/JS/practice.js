@@ -1,6 +1,93 @@
-var timerEl = document.getElementById("#countdown")
-var timeLeft = document.getElementById("#time")
-var question = document.getElementById("#question")
+const timerEl = document.getElementById("#countdown");
+const timeLeft = document.getElementById("#time");;
+const currentQuestion = {};
+const questionCounter = 0;
+const availableQuestions = [];
+const maxQuestions = 5;
+
+// questions
+ var questionSet = [
+    {
+        quest: "What global phenom K-pop group debuted in 2013?",
+        answers: ["BTS", "Big Bang", "Stray Kids", "Seventeen"],
+        correct: 0
+    },
+    {
+        quest: "What is the popular alcoholic drink that combines soju and beer?",
+        answers: ["Mul", "Somaek", "Maekju", "A Good Time"],
+        correct: 1 
+    },
+    {
+        quest: "How many out of the 9 members of the k-pop girl-group TWICE are Korean?",
+        answers: ["1", "3", "5", "6"],
+        correct: 2
+    },
+    {
+        quest: "What is the most famous Korean vacation-island?",
+        answers: ["Oedo", "Hongdo", "Ulleungdo", "Jeju"],
+        correct: 3
+    },
+    {
+        quest: "What is the martial art of Korea?",
+        answers: ["Taekwondo", "Karate", "Judo", "Muay Thai"],
+        correct: 1
+    }
+];
+
+// start!
+function startGame(){
+    questionCounter = 0
+    availableQuestions = questionSet.question
+    showQuestion()
+    newQuestion()
+};
+
+function showQuestion(question, index){
+
+    let inquiry = document.getElementById("question")
+    inquiry.textContent = questionSet[0].quest;    
+
+    const alts = document.querySelectorAll('.alternative')
+
+    alts.forEach(function(p, index){
+    p.textContent = questionSet[0].answers[index]
+})
+};   
+    let choices = document.getElementById('alternative');
+     choices.addEventListener("click", function(){
+        console.log('click')});
+    
+
+
+// get next questions
+function newQuestion(){
+    if (availableQuestions.length === 0){
+        localStorage.setItem('recentScore', score)
+        
+        return window.location.assign('./score.html')
+    }
+
+    const questionIndex = Math.floor(Math.random()*availableQuestions.length)
+    currentQuestion = availableQuestions[questionIndex]
+    question.innerText = currentQuestion.question
+
+    answer.forEach(answer => {
+        const number = choice.dataset['number']
+        choice.innerText = currentQuestion['answer', number]
+    })
+}
+
+// answers.forEach(answer =>{
+    // answer.addEventListener('click', )
+// })
+
+// for (var i=0; i <= questionSet.length; i++){
+//     var thisOne = document.getElementById('#question');
+//     thisOne.textContent = ('sup')
+//     console.log(thisOne)
+    
+// }
+
 
 //timer
 function countdown(){
@@ -15,7 +102,7 @@ function countdown(){
             timeLeft--;
         }
         else {
-            timer.textContent = "";
+            time.textContent = "";
             clearInterval(timeInterval);
             clearInterval(timeInterval)
             // need function here to happen after timer hits zero
@@ -25,40 +112,12 @@ function countdown(){
     
 };
 
- countdown();
-// questions
- var questionSet = [
-    {
-        question: "What global phenom K-pop group do these members belong to?",
-        answers: ["BTS", "Big Bang", "Stray Kids", "Seventeen"],
-        correct: 0
-    },
-    {
-        question: "What is the popular alcoholic drink that combines soju and beer?",
-        answers: ["Mul", "Somaek", "Maekju", "A Good Time"],
-        answer: 1 
-    },
-    {
-        question: "How many out of the 9 members of the k-pop girl-group TWICE are not Korean?",
-        answers: ["1", "3", "4", "6"],
-        answer: 2
-    },
-    {
-        question: "What is the most famous Korean vacation-island?",
-        answers: ["Oedo", "Hongdo", "Ulleungdo", "Jeju"],
-        answer: 3
-    },
-    {
-        question: "What famous K-drama are these two (now married) actors from?",
-        answers: ["Vagabond", "Crash Landing on You", "Attorney Woo", "Prison Playbook"],
-        answer: 1
-    }
-];
+showQuestion()
+countdown()
+// startGame();
 
-console.log(questionSet[2].question)
-
-// function showQuestion(){
-
+// function showQuestion()on.('click',XXX){
+    
 // }
 
 

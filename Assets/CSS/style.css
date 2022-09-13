@@ -1,20 +1,22 @@
 *{
     font-size: 38px;
     font-family: serif;
+    background-color: slategray;
 }
 
-body{
+/* body{
     background-image:url("Quiz_Challenge\Assets\images\seoul-wallpaper-10.jpg");
-}
+} */
 
 h1{
     color: white;
 }
-
+#time{
+    color: white;
+}
 body{
     display: flex;
     justify-content: center;
-    background-color: salmon;
     text-align: center;
     flex-direction: column;
 }
@@ -38,4 +40,27 @@ a:hover {
     
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmnI3uhj5q73wY0cEoQpRB92PeF_hB9hwhgQ&usqp=CAU');
     
+}
+
+/* game */
+
+#question{
+    border: groove skyblue;
+    color: whitesmoke;
+}
+
+
+.alternative{
+    display: flex;
+    border-radius: 10px;
+    background-color: skyblue;
+    border-style: groove;
+    border-color: royalblue;
+    color: darkblue;
+
+}
+
+.alternative:hover{
+    cursor: pointer;
+    transform: scale(1.02);
 }
