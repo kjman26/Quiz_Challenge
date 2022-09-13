@@ -2,7 +2,7 @@ const timerEl = document.getElementById("#countdown");
 const timeLeft = document.getElementById("#time");;
 const currentQuestion = {};
 const questionCounter = 0;
-const availableQuestions = [];
+const availableQuestions = [questionSet.quest];
 const maxQuestions = 5;
 
 // questions
